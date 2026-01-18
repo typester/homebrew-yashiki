@@ -18,6 +18,17 @@ brew install --cask yashiki
 
 ## Post-installation setup
 
+### Gatekeeper warning
+
+Yashiki.app is not signed. On first launch, macOS will show a warning.
+
+**Option 1:** Allow it in **System Settings** > **Privacy & Security**.
+
+**Option 2:** Install without quarantine:
+```sh
+brew install --cask --no-quarantine yashiki
+```
+
 ### Grant Accessibility permission
 
 yashiki requires Accessibility permission to manage windows.
