@@ -31,11 +31,12 @@ brew install --cask --no-quarantine yashiki
 
 ### Grant Accessibility permission
 
-yashiki requires Accessibility permission to manage windows.
+yashiki requires Accessibility permission to manage windows. Without it, the app will exit immediately.
 
-1. Open **System Preferences** > **Privacy & Security** > **Accessibility**
+1. Open **System Settings** > **Privacy & Security** > **Accessibility**
 2. Click the lock icon to make changes
 3. Add **Yashiki.app** to the list and enable it
+4. Relaunch **Yashiki.app** after granting permission
 
 ### Create config file
 
@@ -73,15 +74,14 @@ chmod +x ~/.config/yashiki/init
 
 ### Start yashiki
 
-```sh
-yashiki start
-```
+Open `Yashiki.app` from `/Applications` or Spotlight.
+
+Note: If you start via `yashiki start` CLI, the terminal app will need Accessibility permission instead of Yashiki.app.
 
 ## Usage
 
 ```sh
 yashiki                           # Show help
-yashiki start                     # Start daemon
 yashiki version                   # Show version
 yashiki quit                      # Quit daemon
 ```
