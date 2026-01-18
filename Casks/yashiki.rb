@@ -16,6 +16,13 @@ cask "yashiki" do
   binary "#{appdir}/Yashiki.app/Contents/Resources/layouts/yashiki-layout-tatami"
   binary "#{appdir}/Yashiki.app/Contents/Resources/layouts/yashiki-layout-byobu"
 
+  caveats <<~EOS
+    Yashiki.app is not signed. On first launch, allow it in
+    System Settings > Privacy & Security.
+
+    Or install with: brew install --cask --no-quarantine yashiki
+  EOS
+
   zap trash: [
     "~/.config/yashiki",
     "/tmp/yashiki.sock",
