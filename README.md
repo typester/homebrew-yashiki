@@ -36,13 +36,11 @@ cat > ~/.config/yashiki/init << 'EOF'
 # Layout configuration
 yashiki layout-set-default tatami
 
-# Tag bindings (tag N = $((1<<(N-1))))
-yashiki bind alt-1 tag-view 1
-yashiki bind alt-2 tag-view 2
-yashiki bind alt-3 tag-view 4
-yashiki bind alt-shift-1 window-move-to-tag 1
-yashiki bind alt-shift-2 window-move-to-tag 2
-yashiki bind alt-shift-3 window-move-to-tag 4
+# Tag bindings (1-9)
+for i in 1 2 3 4 5 6 7 8 9; do
+    yashiki bind "alt-$i" tag-view "$((1<<(i-1)))"
+    yashiki bind "alt-shift-$i" window-move-to-tag "$((1<<(i-1)))"
+done
 
 # Window focus
 yashiki bind alt-tab window-focus next
