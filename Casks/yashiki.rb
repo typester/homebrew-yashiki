@@ -16,6 +16,8 @@ cask "yashiki" do
   binary "#{appdir}/Yashiki.app/Contents/Resources/layouts/yashiki-layout-tatami"
   binary "#{appdir}/Yashiki.app/Contents/Resources/layouts/yashiki-layout-byobu"
 
+  zsh_completion "completions/zsh/_yashiki"
+
   caveats <<~EOS
     Yashiki.app is not signed. On first launch, allow it in
     System Settings > Privacy & Security.
