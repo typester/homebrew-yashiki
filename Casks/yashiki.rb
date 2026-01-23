@@ -1,9 +1,9 @@
 cask "yashiki" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.9.0"
-  sha256 arm:   "ce5bf582f0ead7ed8a2278c6b1120f96e311f78398a2d7e706ab1f7c2938c47c",
-         intel: "1527c2281d93871bccb3df5a43a31883b91b0109a80e3486a61d76eb3bb96495"
+  version "0.9.1"
+  sha256 arm:   "f8336c755ec1dc940ff09cd6550ab2ec2561e3db5efabf168f4848a1b3e12b87",
+         intel: "a8c185cc3fd2fa4b9e149c1a0edb8d33442a4f77314bd24980e3c61e460e29ca"
 
   url "https://github.com/typester/yashiki/releases/download/yashiki-v#{version}/Yashiki-#{arch}-#{version}.zip"
   name "Yashiki"
