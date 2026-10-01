@@ -10,6 +10,8 @@ cask "yashiki" do
   desc "macOS tiling window manager"
   homepage "https://github.com/typester/yashiki"
 
+  depends_on :macos
+
   app "Yashiki.app"
 
   binary "#{appdir}/Yashiki.app/Contents/MacOS/yashiki"
